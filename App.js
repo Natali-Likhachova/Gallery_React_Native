@@ -1,27 +1,9 @@
 import React, {Component} from 'react';
-import {ScrollView, View, StyleSheet, Image, Text} from 'react-native';
+import {ScrollView, View, StyleSheet, Image, Text, Button} from 'react-native';
+import Photo from "./Photo"
+import {styles} from "./styles";
 
-
-const styles = StyleSheet.create({
-    heading: {
-        padding: 30,
-        fontSize: 50,
-    },
-    container: {
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    photo: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        alignContent: 'center',
-    },
-
-    box: {
-        //margin: 20,
-    },
-});
+//import {createAppContainer} from 'react-navigation';
 
 export default class Gallery extends Component {
     render() {
@@ -29,121 +11,185 @@ export default class Gallery extends Component {
             <ScrollView>
                 <View style={styles.container}>
                     <Text style={styles.heading}>Gallery</Text>
-                    <View style={styles.photo}>
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/d-archipov.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Dmitry Arkhipov
-                            </Text>
+                    <View style={styles.box}>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/d-archipov.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Dmitry Arkhipov"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/d-budkov.jpg",  width: 150, height: 100}}/>
-                            <Text>
-                                Denis Budkov
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/d-budkov.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Denis Budkov"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/m-vershinin.jpg",  width: 150, height: 100}}/>
-                            <Text>
-                                Mikhail Vershinin
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/m-vershinin.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Mikhail Vershinin"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/gaponyuk.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Oleg Gaponyuk
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/gaponyuk.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Oleg Gaponyuk"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/korzonov.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Daniil Korzhonov
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/korzonov.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Daniil Korzhonov"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/v-medvedev_3.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Vladimir Medvedev
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/v-medvedev_3.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Vladimir Medvedev"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/pustovoy.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Yuri Pustovoi
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/pustovoy.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Yuri Pustovoi"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/1600pano_v03_full_size.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Sergey Semenov
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/1600pano_v03_full_size.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Sergey Semenov"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "https://rosphoto.com/images/u/articles/1407/sokolovsky.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Vlad Sokolovsky
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "https://rosphoto.com/images/u/articles/1407/sokolovsky.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Vlad Sokolovsky"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/a-suloev.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Alexey Suloev
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/a-suloev.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Alexey Suloev"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "https://rosphoto.com/images/u/articles/1407/k-uytnov.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Kirill Uyutnov
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "https://rosphoto.com/images/u/articles/1407/k-uytnov.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Kirill Uyutnov"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/l-halfen.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Leonid Halfen
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/l-halfen.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Leonid Halfen"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/shpilenok.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Igor Shpilenok
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/shpilenok.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Igor Shpilenok"
+                            />
                         </View>
 
-                        <View style={styles.box}>
-                            <Image source={{
-                                uri: "http://www.rosphoto.com/images/u/articles/1407/altay.jpg", width: 150, height: 100}}/>
-                            <Text>
-                                Alexey Ebel
-                            </Text>
+                        <View>
+                            <Photo
+                                img={{
+                                    uri: "http://www.rosphoto.com/images/u/articles/1407/altay.jpg",
+                                    width: 150,
+                                    height: 100
+                                }}
+                                author="Alexey Ebel"
+                            />
                         </View>
+                        {/*<Button onPress={() => this.props.navigation.navigate('test')} title="test"
+                        >Go to test</Button>*/}
                     </View>
                 </View>
             </ScrollView>
         );
     }
 }
+
+/*
+class Test extends Component{
+    render() {
+        return(
+            <View>
+                <Text>
+                    This Test!)))
+                </Text>
+                <Button onPress={() => this.props.navigation.navigate('home')} title="home"
+                >Go to home</Button>
+            </View>
+        )
+    }
+}
+
+export default createAppContainer({
+    home: Gallery,
+    test: Test
+})*/
